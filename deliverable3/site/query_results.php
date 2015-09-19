@@ -36,24 +36,22 @@
 	
 	
 	<body>
-		<div id="header_container">		
-		    <div class="container">	
-			<!-- Header -->						
-				<div id="header" class="row">
-					<div class="4u">
-						<div class="transparent">
-							<h1><a href="index.php"><span class="header_colour">@pospaseis</span></a></h1>
+		<div id="site_content">			
+		    <div class="container">		
+					<div class="row">
+					   <section class="6u">							
+							<h1>@pospaseis</h1>							   
+							<h2>Υπηρεσία αναζήτησης αποσπάσεων εκπαιδευτικών</h2>
                                <?php                                
-                                $conn = new mysqli("userdb","stoug","#46cortu", "stoug-db1");                                                                                  						         
+                                $conn = new mysqli("userdb","stoug","#46cortu", "stoug-db1");                                                                                  						  
                                 $result2 = $conn->query("SELECT COUNT(*) AS N FROM APOSPASI");
 				                $row2 = $result2->fetch_assoc();			                
 							    echo "<p style='font-size: 9pt;'>",$row2['N']," αποσπάσεις εκπαιδευτικών σε τάξη</p>";				                
 				                $conn->close();                                               
-                               ?>								
-					    </div>					    
-					</div>	
+                               ?>		
+                         </section>					
 										
-					<nav id="main-nav" class="8u">
+					<section class="6u">
 			           <?php			    
   		               if (!isset($_GET['sub'])){
 		                  echo "Παρακαλώ πηγαίντε στην αρχική οθόνη του @pospasis.gr";		            
@@ -94,7 +92,7 @@
 		              }
 		              				
 					  ?>
-					</nav>											
+					</section>											
 				</div>				
 			</div>	
         </div>
@@ -274,10 +272,15 @@
 								<h3>Πληροφορίες</h3>
 							</section>
 							<section class="12u">
-					           <p>Υπεύθυνος για την ανάπτυξη και συντήρηση του @pospaseis είναι ο <a href="http://users.sch.gr/stoug">Στέφανος Ουγιάρογλου</a>, εκπαιδευτικός ΠΕ20. Η υπηρεσία δε σχετίζεται με κανέναν φορέα.</p>					  
-					           <p style="color:'#FFF';">Ε: <a href="mailto:stoug@sch.gr">stoug (at) sch.gr</a></p>	
-					           <p style="color:'#FFF';">Copyright &copy; 2015 Stefanos Ougiaroglou. Designed using template from <a href="http://css3templates.co.uk">css3templates.co.uk</a></p>				  
+					           <p>Αποκλειστικά υπεύθυνος για την ανάπτυξη και συντήρηση του @pospaseis είναι ο <a href="http://users.sch.gr/stoug">Στέφανος Ουγιάρογλου</a>, εκπαιδευτικός ΠΕ20. Η υπηρεσία δεν σχετίζεται με κανέναν φορέα.<p>
+							   <p> Επισκεφθείτε την σελίδα του έργου στο <a href="https://github.com/ellak-monades-aristeias/apospaseis">GitHub</a></p>    							   
+					           <p>Η ανάπτυξη της υπηρεσίας χρηματοδοτήθηκε ως ΕΛ/ΛΑΚ στα πλαίσια του υπο-έργου "Χρηματική Ενίσχυση για έργα ανάπτυξης ΕΛ/ΛΑΚ" του έργου <a href="https://www.grnet.gr/el/ellak">"Ηλεκτρονικές Υπηρεσίες για την Ανάπτυξη και Διάδοση του Ανοιχτού Λογισμικού"</a> που υλοποιείται από την <a href="https://www.grnet.gr/">ΕΔΕΤ Α.Ε.</a>.</p>					  					           
+					           <p> Δείτε την πρόταση πoυ έλαβε έγκριση για χρηματοδότηση <a href="protasi.pdf">εδώ</a></p>    
+					           <p style="color:'#FFF';">Ε: <a href="mailto:stoug@uom.gr">stoug (at) uom.gr</a></p>						           
+					           <p style="color:'#FFF';">Copyright &copy; 2015. Designed using template from <a href="http://css3templates.co.uk">css3templates.co.uk</a></p>				  
 							</section>
+						</div>
+					</section>
 						</div>
 					</section>
 					

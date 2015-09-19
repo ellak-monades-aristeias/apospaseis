@@ -27,15 +27,14 @@ img {
   border: 0;
 }
 
-h1, h2, h3, h4, h5, h6 { 
-  color: #33D0FD;
+h1, h2, h3, h4, h5, h6 {   
   letter-spacing: 0em;
   padding: 0 0 0.5em 0;
 }
 
 h1, h2, h3 { 
   font: bold 140% 'News Cycle', arial;
-  margin: 0 0 1em 0;
+  margin: 0 0 0.3em 0;
   padding: 0 0 0.5em 0;
 }
 
@@ -203,7 +202,7 @@ ol li {
 }
 
 #site_content {
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
 }
 
 #sidebar {
