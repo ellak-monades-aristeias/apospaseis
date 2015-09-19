@@ -71,7 +71,7 @@
 							<h1>@pospaseis</h1>							   
 							<h2>Υπηρεσία αναζήτησης αποσπάσεων εκπαιδευτικών</h2>
                                <?php                                
-                                $conn = new mysqli("userdb","stoug","#46cortu", "stoug-db1");                                                                                  						  
+                                $conn = new mysqli("userdb","stoug","pwd", "stoug-db1");                                                                                  						  
                                 $result2 = $conn->query("SELECT COUNT(*) AS N FROM APOSPASI");
 				                $row2 = $result2->fetch_assoc();			                
 							    echo "<p style='font-size: 9pt;'>",$row2['N']," αποσπάσεις εκπαιδευτικών σε τάξη</p>";				                
@@ -98,7 +98,7 @@
                           echo "<table style='margin: 0 auto;' class='table1'>";                          
                           echo "<tr><td colspan=2><h2>Αναζήτηση αποσπάσεων με κριτήρια</h2></td></tr>";
                           
-                          $conn = new mysqli("userdb","stoug","#46cortu", "stoug-db1");                                                                                  						                                                                             						  
+                          $conn = new mysqli("userdb","stoug","#pwd", "stoug-db1");                                                                                  						                                                                             						  
                           mysqli_set_charset($conn,"utf8");
                           
 						  $sqlcommand = "SELECT DISTINCT TYPE FROM FOREAS ORDER BY TYPE";
@@ -196,7 +196,7 @@
 						<h2>Νέα-Ανακοινώσεις</h2>
 
                                <?php                                
-                                $conn = new mysqli("userdb","stoug","#46cortu", "stoug-db1");                                                                                  						      
+                                $conn = new mysqli("userdb","stoug","#pwd", "stoug-db1");                                                                                  						      
                                 mysqli_set_charset($conn,"utf8");
                                 $result2 = $conn->query("SELECT * FROM ANAK ORDER BY D DESC");
                                 while ($row = $result2->fetch_assoc()){

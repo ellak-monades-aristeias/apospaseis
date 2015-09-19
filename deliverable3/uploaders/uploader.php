@@ -15,7 +15,7 @@
 <Center>
 <?php
 		         
-mysql_connect("userdb","stoug","#46cortu");
+mysql_connect("userdb","stoug","pwd");
 mysql_select_db("stoug-db1");
 mysql_query("SET NAMES 'utf8'");
 $row = 0;
