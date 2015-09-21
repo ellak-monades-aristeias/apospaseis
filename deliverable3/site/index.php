@@ -207,7 +207,32 @@ function clearAll(){
             
         </div>      
       </div>
-        
+
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">
+                        <strong>Ανακοινωσεις</strong>
+                    </h2>
+                    <hr>
+                    
+                     <?php                                
+                     $conn = new mysqli("userdb","stoug","#", "stoug-db1");                                                                                  						      
+                     mysqli_set_charset($conn,"utf8");
+                     $result2 = $conn->query("SELECT * FROM ANAK ORDER BY D DESC");
+                     while ($row = $result2->fetch_assoc()){
+	                    echo "<p class='small'><strong>",$row['HM'],": </strong>";		
+	                    echo "",$row['KEIMENO'],"</p>";		
+	                 }		                
+	                 $conn->close();                                               
+                     ?>	
+
+                </div>
+            </div>
+        </div>
+
+
         <div class="row text-center" >
             <div class="box">
                 <div class="col-sm-3 col-xs-6">					
@@ -236,33 +261,9 @@ function clearAll(){
 					</p>		            
                 </div>
             </div>
-        </div>        
-
-        <div class="row">
-            <div class="box">
-                <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center">
-                        <strong>Ανακοινωσεις</strong>
-                    </h2>
-                    <hr>
-                    
-                     <?php                                
-                     $conn = new mysqli("userdb","stoug","#", "stoug-db1");                                                                                  						      
-                     mysqli_set_charset($conn,"utf8");
-                     $result2 = $conn->query("SELECT * FROM ANAK ORDER BY D DESC");
-                     while ($row = $result2->fetch_assoc()){
-	                    echo "<p class='small'><strong>",$row['HM'],": </strong>";		
-	                    echo "",$row['KEIMENO'],"</p>";		
-	                 }		                
-	                 $conn->close();                                               
-                     ?>	
-
-                </div>
-            </div>
-        </div>
-
-    </div>
+        </div>  
+    </div>        
+    
     <!-- /.container -->
 
     <footer>
