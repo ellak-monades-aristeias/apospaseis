@@ -47,7 +47,7 @@
     <div class="brand">@pospaseis</div>
     <div class="address-bar">
     <?php                                
-        $conn = new mysqli("userdb","stoug","#", "stoug-db1");                                                                                  						  
+        $conn = new mysqli("userdb","stoug","yourpwd", "stoug-db1");                                                                                  						  
         $result2 = $conn->query("SELECT COUNT(*) AS N FROM APOSPASI");
 		$row2 = $result2->fetch_assoc();			                
 		echo "Υπηρεσια αναζητησης ",$row2['N']," αποσπασεων εκπαιδευτικων";				                
@@ -75,6 +75,9 @@
                     <li>
                         <a href="index.php">Home</a>
                     </li>
+                    <li>
+                        <a href="open.php?path=apof">Αποφασεις</a>
+                    </li>                    
                     <li>
                         <a href="https://github.com/ellak-monades-aristeias/apospaseis">GitHub</a>
                     </li>

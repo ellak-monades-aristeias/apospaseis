@@ -46,7 +46,7 @@
     <div class="brand">@pospaseis</div>
     <div class="address-bar">
     <?php                                
-        $conn = new mysqli("userdb","stoug","#", "stoug-db1");                                                                                  						  
+        $conn = new mysqli("userdb","stoug","yourpwd", "stoug-db1");                                                                                  						  
         $result2 = $conn->query("SELECT COUNT(*) AS N FROM APOSPASI");
 		$row2 = $result2->fetch_assoc();			                
 		echo "Υπηρεσια αναζητησης ",$row2['N']," αποσπασεων εκπαιδευτικων";				                
@@ -74,6 +74,9 @@
                     <li>
                         <a href="index.php">Home</a>
                     </li>
+                    <li>
+                        <a href="open.php?path=apof">Αποφασεις</a>
+                    </li>                    
                     <li>
                         <a href="https://github.com/ellak-monades-aristeias/apospaseis">GitHub</a>
                     </li>
@@ -103,7 +106,7 @@
 		  else{
 		    echo "<div class='container-fluid'>";
 		  }			
-          $conn = new mysqli("userdb","stoug","#", "stoug-db1");                                                                                  						                                
+          $conn = new mysqli("userdb","stoug","yourpwd", "stoug-db1");                                                                                  						                                
                           						   
 		  $typeforeas = mysqli_real_escape_string($conn, $_GET['type_foreas']);		            
 		  $vathmida = mysqli_real_escape_string($conn, $_GET['vathmida']);
@@ -126,7 +129,7 @@
                           
 	      $pr = substr($pr, 0, strlen($pr)-3);						  
 						  
-          $conn = new mysqli("userdb","stoug","#", "stoug-db1");                                                                                  						                                
+          $conn = new mysqli("userdb","stoug","yourpwd", "stoug-db1");                                                                                  						                                
           mysqli_set_charset($conn,"utf8");					      
           $result = $conn->query("SELECT COUNT(*) AS N $where");
 		  $row = $result->fetch_assoc();
@@ -137,10 +140,9 @@
 		     echo "</div></div></div>";
 		  }			                
           $conn->close();  
-          echo "</div>";
   	 
     	 if ($sub == 'Αναζήτηση αποσπάσεων'){
-            $conn = new mysqli("userdb","stoug","#", "stoug-db1");                                                                                  						                                                                               						  
+            $conn = new mysqli("userdb","stoug","yourpwd", "stoug-db1");                                                                                  						                                                                               						  
             mysqli_set_charset($conn,"utf8");							
 		    $sqlcommand = "SELECT AM, LASTNAME, FIRSTNAME, VATHMIDA, KLADOS, APO, NAME, TYPE, YEAR_APOSPASI, COMMENT1, COMMENT2 $where ORDER BY YEAR_APOSPASI, TYPE, NAME";						 
             $result = $conn->query($sqlcommand);
@@ -151,11 +153,11 @@
 		    echo "<table class='table table-condensed table-striped table-hover'>";
 		    echo "<thead>";
 	        echo "<strong>";
-	        echo "<tr>";
+	        echo "<th>Απ</th>";	        
 	        echo "<th>ΑΜ</th>"; 
             echo "<th>Επώνυμο</th>";
 	        echo "<th>Όνομα</th>";
-            echo "<th>ΠΕ/ΔΕ</th>";
+            echo "<th>Β.</th>";
 	        echo "<th>Ειδικ.</th>";
 	        echo "<th>Οργανική</th>";
 	        echo "<th>Τοποθέτηση</th>";
@@ -163,12 +165,13 @@
 	        echo "<th>Έτος</th>";	
 	        echo "<th>Σχ.1</th>";	
 	        echo "<th>Σχ.2</th>";
-	        echo "</tr>";
 	        echo "</strong>";	
 	        echo "</thead>";
 		    echo "<tbody>";					
      	     
-  	        while ($row = $result->fetch_assoc()) {										
+  	        while ($row = $result->fetch_assoc()) {		
+			  echo "<tr>";
+              echo "<td class='small'><a href='open.php?path=apof/",$row['YEAR_APOSPASI'],"/",$row['TYPE'],"'><img src=img/f.png></a></td>";																		
 		   	  echo "<td class='small'>",$row['AM'],"</td>"; 
 			  echo "<td class='small'>",$row['LASTNAME'],"</td>";
 			  echo "<td class='small'>",$row['FIRSTNAME'],"</td>";
@@ -177,7 +180,7 @@
 			  echo "<td class='small'>",$row['APO'],"</td>";
 			  echo "<td class='small'>",$row['NAME'],"</td>";
 			  echo "<td class='small'>",$row['TYPE'],"</td>";
-			  echo "<td class='small'>",$row['YEAR_APOSPASI'],"</td>";														
+			  echo "<td class='small'>",$row['YEAR_APOSPASI'],"</td>";																	  
 			  echo "<td class='small'>",$row['COMMENT1'],"</td>";														
 			  echo "<td class='small'>",$row['COMMENT2'],"</td>";														
 			  echo "</tr>";
@@ -194,9 +197,8 @@
 		    $sql3 = "SELECT VATHMIDA AS A, COUNT(*) AS N $where GROUP BY VATHMIDA ORDER BY VATHMIDA";
 		    $sql4 = "SELECT KLADOS AS A, COUNT(*) AS N $where GROUP BY KLADOS ORDER BY KLADOS";						
 						   
-            $conn = new mysqli("userdb","stoug","#", "stoug-db1");                                                                                  						                                                                                						  
-            mysqli_set_charset($conn,"utf8");
-		    echo "<div class='container'>";
+            $conn = new mysqli("userdb","stoug","yourpwd", "stoug-db1");                                                                                  						                                                                                						  
+            mysqli_set_charset($conn,"utf8");		    
 		    echo "<div class='row'><div class='box'>";               
             echo "<div class='col-lg-12 text-center' >";		           
 		    printtable("Έτος",$sql1, $conn);
@@ -204,8 +206,7 @@
 		    printtable("Ειδικότητα",$sql4, $conn);
 		    printtable("Τοποθέτηση",$sql2, $conn);			  
 		    echo "</div>";
-		    echo "</div>";
-		    echo "</div></div></div>";			  
+		    echo "</div></div>";			  
 		    $conn->close();          
 	    }
 	    echo "</div>";
@@ -256,33 +257,42 @@
 				
 
 	 function printtable($textfield, $sql, $conn){
-
 		$result = $conn->query($sql);
 	    echo "<div class='table-responsive'>";        
 		echo "<table class='table table-striped'>";				
 		echo "<thead>";
 	    echo "<strong>";
 		echo "<th colspan=2>Αποσπάσεις ανα $textfield</th>";
-		echo "</tr>";						
-		echo "<tr><th class='text-center'>$textfield</th><th class='text-center'>Πλήθος αποσπάσεων</th><tr>";
+		if ($textfield != "Έτος"){						
+		   echo "<tr><th class='text-center'>$textfield</th><th class='text-center'>Πλήθος αποσπάσεων</th><tr>";
+	    }
+	    else{
+		   echo "<tr><th class='text-center'>$textfield</th><th class='text-center'>Πλήθος αποσπάσεων</th><th class='text-center'>Αποφάσεις</th><tr>";
+		}
 	    echo "</strong>";	
 	    echo "</thead>";
 		echo "<tbody>";				
 		$i=0;
 		while ($row = $result->fetch_assoc()){
-          echo "<tr>";											
-	      echo "<td width='50%'>",$row['A'],"</td>"; 								
-		  echo "<td width='50%'>",$row['N'],"</td>"; 
+          echo "<tr>";			
+          if ($textfield != "Έτος"){								
+	         echo "<td width='50%'>",$row['A'],"</td>"; 								
+		     echo "<td width='50%'>",$row['N'],"</td>"; 
+	      }
+	      else{
+	         echo "<td width='35%'>",$row['A'],"</td>"; 								
+		     echo "<td width='35%'>",$row['N'],"</td>"; 			  
+		     echo "<td width='30%'><a href='open.php?path=apof/",$row['A'],"'><img src='img/f.png'></a></td>"; 			  
+		  }
 		  echo "</tr>";								
 		}
 		echo "</tbody>";		
 		echo "</table>";				
-									
+		echo "</div>";									
 	 }								
 	?>			  
 		
 
-    <!-- /.container -->
 
     <footer>
         <div class="container">

@@ -76,7 +76,7 @@ function clearAll(){
     <div class="brand">@pospaseis</div>
     <div class="address-bar">
     <?php                                
-        $conn = new mysqli("userdb","stoug","#", "stoug-db1");                                                                                  						  
+        $conn = new mysqli("userdb","stoug","yourpwd", "stoug-db1");                                                                                  						  
         $result2 = $conn->query("SELECT COUNT(*) AS N FROM APOSPASI");
 		$row2 = $result2->fetch_assoc();			                
 		echo "Υπηρεσια αναζητησης ",$row2['N']," αποσπασεων εκπαιδευτικων";				                
@@ -93,7 +93,7 @@ function clearAll(){
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>    
                 </button>
                 <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
                 <a class="navbar-brand" href="index.html">@pospaseis</a>
@@ -104,6 +104,9 @@ function clearAll(){
                     <li>
                         <a href="index.php">Home</a>
                     </li>
+                    <li>
+                        <a href="open.php?path=apof">Αποφασεις</a>
+                    </li>                    
                     <li>
                         <a href="https://github.com/ellak-monades-aristeias/apospaseis">GitHub</a>
                     </li>
@@ -127,7 +130,7 @@ function clearAll(){
      echo "<form name='frm' action='query_results.php' method='GET' onsubmit='return checkIfOk()'>";
                              
      echo "<div class='col-lg-12'><hr><h2 class='intro-text text-center'><strong>Αναζητηση αποσπασεων με κριτηρια</strong></h2><hr></div>";
-     $conn = new mysqli("userdb","stoug","#", "stoug-db1");                                                                                  						                                                                             						  
+     $conn = new mysqli("userdb","stoug","yourpwd", "stoug-db1");                                                                                  						                                                                             						  
      mysqli_set_charset($conn,"utf8");
                           
 	 $sqlcommand = "SELECT DISTINCT TYPE FROM FOREAS ORDER BY TYPE";
@@ -218,7 +221,7 @@ function clearAll(){
                     <hr>
                     
                      <?php                                
-                     $conn = new mysqli("userdb","stoug","#", "stoug-db1");                                                                                  						      
+                     $conn = new mysqli("userdb","stoug","yourpwd", "stoug-db1");                                                                                  						      
                      mysqli_set_charset($conn,"utf8");
                      $result2 = $conn->query("SELECT * FROM ANAK ORDER BY D DESC");
                      while ($row = $result2->fetch_assoc()){
