@@ -96,21 +96,21 @@ function clearAll(){
                     <span class="icon-bar"></span>    
                 </button>
                 <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-                <a class="navbar-brand" href="index.html">@pospaseis</a>
+                <a class="navbar-brand" href="index.php">@pospaseis</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">				
                 <ul class="nav navbar-nav">
-                    <li>
+                    <li class="small">
                         <a href="index.php">Home</a>
                     </li>
-                    <li>
+                    <li class="small">
                         <a href="open.php?path=apof">Αποφασεις</a>
                     </li>                    
-                    <li>
+                    <li class="small">
                         <a href="https://github.com/ellak-monades-aristeias/apospaseis">GitHub</a>
                     </li>
-                    <li>
+                    <li class="small">
                         <a href="info.php">Πληροφοριες</a>
                     </li>
                 </ul>
@@ -215,18 +215,25 @@ function clearAll(){
               <h2 class="intro-text text-center">
                  <strong>Ανακοινωσεις</strong>
               </h2>
-              <hr> 
-           </div>                     
-            <?php                                
-             $conn = new mysqli("userdb","stoug","#", "stoug-db1");                                                                                  						      
-             mysqli_set_charset($conn,"utf8");
-             $result2 = $conn->query("SELECT * FROM ANAK ORDER BY D DESC");
-             while ($row = $result2->fetch_assoc()){
-	            echo "<div class='col-lg-2 text-right'><strong>",$row['HM'],": </strong></div>";		
-	            echo "<div class='col-lg-10'>",$row['KEIMENO'],"</div>";		
-	         }		                
-	         $conn->close();                                               
-             ?>           
+              <hr>                
+
+		      <table class='table table-striped table-hover'>	                                          					                            
+                 <?php  
+                 $conn = new mysqli("userdb","stoug","#", "stoug-db1");                                                                                  						      
+                 mysqli_set_charset($conn,"utf8");
+                 $result2 = $conn->query("SELECT * FROM ANAK ORDER BY D DESC");
+                 echo "<tbody>";
+                 while ($row = $result2->fetch_assoc()){
+				    echo "<tr>";
+	                echo "<td class='text-right'><strong>",$row['HM']," </strong></td>";		
+	                echo "<td>",$row['KEIMENO'],"</td>";		
+	                echo "</tr>";
+	             }		 
+	             echo "</tbody>";               
+	             $conn->close();                                               
+                 ?>   
+              </table>    
+
         </div>
      </div>
 

@@ -72,16 +72,16 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">				
                 <ul class="nav navbar-nav">
-                    <li>
+                    <li class="small">
                         <a href="index.php">Home</a>
                     </li>
-                    <li>
+                    <li class="small">
                         <a href="open.php?path=apof">Αποφασεις</a>
                     </li>                    
-                    <li>
+                    <li class="small">
                         <a href="https://github.com/ellak-monades-aristeias/apospaseis">GitHub</a>
                     </li>
-                    <li>
+                    <li class="small">
                         <a href="info.php">Πληροφοριες</a>
                     </li>
                 </ul>
@@ -95,7 +95,7 @@
         <div class="row">
             <div class="box">
                 <div class="col-lg-12 text-center">
-	               <div class='table-responsive'>
+
 		              <table class='table table-striped table-hover'>	                                          					
                          <?php  
                          $path = $_GET['path'];                             
@@ -119,7 +119,7 @@
                          echo "</tbody>";
                          ?>	
                       </table>    
-                   </div>    
+
                 </div>
             </div>
         </div>

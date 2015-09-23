@@ -71,16 +71,16 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">				
                 <ul class="nav navbar-nav">
-                    <li>
+                    <li class="small">
                         <a href="index.php">Home</a>
                     </li>
-                    <li>
+                    <li class="small">
                         <a href="open.php?path=apof">Αποφασεις</a>
                     </li>                    
-                    <li>
+                    <li class="small">
                         <a href="https://github.com/ellak-monades-aristeias/apospaseis">GitHub</a>
                     </li>
-                    <li>
+                    <li class="small">
                         <a href="info.php">Πληροφοριες</a>
                     </li>
                 </ul>
