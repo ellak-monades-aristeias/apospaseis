@@ -46,7 +46,7 @@
     <div class="brand">@pospaseis</div>
     <div class="address-bar">
     <?php                                
-        $conn = new mysqli("userdb","stoug","yourpwd", "stoug-db1");                                                                                  						  
+        $conn = new mysqli("userdb","stoug","#", "stoug-db1");                                                                                  						  
         $result2 = $conn->query("SELECT COUNT(*) AS N FROM APOSPASI");
 		$row2 = $result2->fetch_assoc();			                
 		echo "Υπηρεσια αναζητησης ",$row2['N']," αποσπασεων εκπαιδευτικων";				                
@@ -106,7 +106,7 @@
 		  else{
 		    echo "<div class='container-fluid'>";
 		  }			
-          $conn = new mysqli("userdb","stoug","yourpwd", "stoug-db1");                                                                                  						                                
+          $conn = new mysqli("userdb","stoug","#", "stoug-db1");                                                                                  						                                
                           						   
 		  $typeforeas = mysqli_real_escape_string($conn, $_GET['type_foreas']);		            
 		  $vathmida = mysqli_real_escape_string($conn, $_GET['vathmida']);
@@ -129,7 +129,7 @@
                           
 	      $pr = substr($pr, 0, strlen($pr)-3);						  
 						  
-          $conn = new mysqli("userdb","stoug","yourpwd", "stoug-db1");                                                                                  						                                
+          $conn = new mysqli("userdb","stoug","#", "stoug-db1");                                                                                  						                                
           mysqli_set_charset($conn,"utf8");					      
           $result = $conn->query("SELECT COUNT(*) AS N $where");
 		  $row = $result->fetch_assoc();
@@ -142,7 +142,7 @@
           $conn->close();  
   	 
     	 if ($sub == 'Αναζήτηση αποσπάσεων'){
-            $conn = new mysqli("userdb","stoug","yourpwd", "stoug-db1");                                                                                  						                                                                               						  
+            $conn = new mysqli("userdb","stoug","#", "stoug-db1");                                                                                  						                                                                               						  
             mysqli_set_charset($conn,"utf8");							
 		    $sqlcommand = "SELECT AM, LASTNAME, FIRSTNAME, VATHMIDA, KLADOS, APO, NAME, TYPE, YEAR_APOSPASI, COMMENT1, COMMENT2 $where ORDER BY YEAR_APOSPASI, TYPE, NAME";						 
             $result = $conn->query($sqlcommand);
@@ -197,7 +197,7 @@
 		    $sql3 = "SELECT VATHMIDA AS A, COUNT(*) AS N $where GROUP BY VATHMIDA ORDER BY VATHMIDA";
 		    $sql4 = "SELECT KLADOS AS A, COUNT(*) AS N $where GROUP BY KLADOS ORDER BY KLADOS";						
 						   
-            $conn = new mysqli("userdb","stoug","yourpwd", "stoug-db1");                                                                                  						                                                                                						  
+            $conn = new mysqli("userdb","stoug","#", "stoug-db1");                                                                                  						                                                                                						  
             mysqli_set_charset($conn,"utf8");		    
 		    echo "<div class='row'><div class='box'>";               
             echo "<div class='col-lg-12 text-center' >";		           

@@ -76,7 +76,7 @@ function clearAll(){
     <div class="brand">@pospaseis</div>
     <div class="address-bar">
     <?php                                
-        $conn = new mysqli("userdb","stoug","yourpwd", "stoug-db1");                                                                                  						  
+        $conn = new mysqli("userdb","stoug","#", "stoug-db1");                                                                                  						  
         $result2 = $conn->query("SELECT COUNT(*) AS N FROM APOSPASI");
 		$row2 = $result2->fetch_assoc();			                
 		echo "Υπηρεσια αναζητησης ",$row2['N']," αποσπασεων εκπαιδευτικων";				                
@@ -122,15 +122,14 @@ function clearAll(){
     
     
     <div class="container">
-
-        <div class="row">
-            <div class="box">
+    <div class="row">
+    <div class="box">
                 
     <?php                                                   
      echo "<form name='frm' action='query_results.php' method='GET' onsubmit='return checkIfOk()'>";
                              
      echo "<div class='col-lg-12'><hr><h2 class='intro-text text-center'><strong>Αναζητηση αποσπασεων με κριτηρια</strong></h2><hr></div>";
-     $conn = new mysqli("userdb","stoug","yourpwd", "stoug-db1");                                                                                  						                                                                             						  
+     $conn = new mysqli("userdb","stoug","#", "stoug-db1");                                                                                  						                                                                             						  
      mysqli_set_charset($conn,"utf8");
                           
 	 $sqlcommand = "SELECT DISTINCT TYPE FROM FOREAS ORDER BY TYPE";
@@ -205,68 +204,68 @@ function clearAll(){
      echo"</form>";
                           
      $conn->close();          
-     ?>            
-      
-            
-        </div>      
-      </div>
+     ?>     
+     </div>      
+     </div>
 
-        <div class="row">
-            <div class="box">
-                <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center">
-                        <strong>Ανακοινωσεις</strong>
-                    </h2>
-                    <hr>
-                    
-                     <?php                                
-                     $conn = new mysqli("userdb","stoug","yourpwd", "stoug-db1");                                                                                  						      
-                     mysqli_set_charset($conn,"utf8");
-                     $result2 = $conn->query("SELECT * FROM ANAK ORDER BY D DESC");
-                     while ($row = $result2->fetch_assoc()){
-	                    echo "<p class='small'><strong>",$row['HM'],": </strong>";		
-	                    echo "",$row['KEIMENO'],"</p>";		
-	                 }		                
-	                 $conn->close();                                               
-                     ?>	
+     <div class="row">
+        <div class="box">
+           <div class="col-lg-12">
+              <hr>
+              <h2 class="intro-text text-center">
+                 <strong>Ανακοινωσεις</strong>
+              </h2>
+              <hr> 
+           </div>                     
+            <?php                                
+             $conn = new mysqli("userdb","stoug","#", "stoug-db1");                                                                                  						      
+             mysqli_set_charset($conn,"utf8");
+             $result2 = $conn->query("SELECT * FROM ANAK ORDER BY D DESC");
+             while ($row = $result2->fetch_assoc()){
+	            echo "<div class='col-lg-2 text-right'><strong>",$row['HM'],": </strong></div>";		
+	            echo "<div class='col-lg-10'>",$row['KEIMENO'],"</div>";		
+	         }		                
+	         $conn->close();                                               
+             ?>           
+        </div>
+     </div>
 
-                </div>
+     <div class="row text-center" >
+        <div class="box">
+           <div class="col-sm-3 col-xs-6">					
+              <a href=https://ma.ellak.gr/>
+                 <img src="img/ma.jpg" width=140, height=100>
+              </a>
+           </div>   
+           <div class="col-sm-3 col-xs-6">					
+              <a href="https://ellak.gr/">
+			     <img src="img/elak.jpg" width=140, height=100>
+			  </a>
+		   </div>	
+		   <div class="col-sm-3 col-xs-6">					
+			  <a href="https://www.grnet.gr/">
+				 <img src="img/grnet.jpg" width=140, height=100>
+			  </a>
+		   </div>	
+		   <div class="col-sm-3 col-xs-6">					
+			   <a href="http://www.digitalplan.gov.gr">
+				  <img src="img/ps.jpeg" width=140, height=100>
+			   </a>
+			</div>
+			<div class="col-lg-12">						
+		       <p class='small' align=center>
+			      To <a href="index.php">@pospaseis</a> αναπτύχθηκε στα πλαίσια του 
+				  υπο-έργου "Χρηματική Ενίσχυση για έργα ανάπτυξης ΕΛ/ΛΑΚ" του έργου 
+				  <a href="https://www.grnet.gr/el/ellak">"Ηλεκτρονικές Υπηρεσίες για 
+				  την Ανάπτυξη και Διάδοση του Ανοιχτού Λογισμικού"</a> που υλοποιείται 
+				  από την <a href="https://www.grnet.gr/">ΕΔΕΤ Α.Ε.</a> Επισκεφθείτε 
+				  την σελίδα του έργου στο <a href="https://github.com/ellak-monades-aristeias/apospaseis">GitHub</a>
+			   </p>		            
             </div>
         </div>
-
-
-        <div class="row text-center" >
-            <div class="box">
-                <div class="col-sm-3 col-xs-6">					
-                    <a href=https://ma.ellak.gr/>
-                       <img src="img/ma.jpg" width=140, height=100>
-                    </a>
-                 </div>   
-                 <div class="col-sm-3 col-xs-6">					
-                    <a href="https://ellak.gr/">
-						<img src="img/elak.jpg" width=140, height=100>
-					</a>
-				 </div>	
-				 <div class="col-sm-3 col-xs-6">					
-					<a href="https://www.grnet.gr/">
-						<img src="img/grnet.jpg" width=140, height=100>
-					</a>
-				 </div>	
-				 <div class="col-sm-3 col-xs-6">					
-					<a href="http://www.digitalplan.gov.gr">
-						<img src="img/ps.jpeg" width=140, height=100>
-					</a>
-				 </div>
-				 <div class="col-lg-12">						
-		            <p class='small' align=center>
-						To <a href="index.php">@pospaseis</a> αναπτύχθηκε στα πλαίσια του υπο-έργου "Χρηματική Ενίσχυση για έργα ανάπτυξης ΕΛ/ΛΑΚ" του έργου <a href="https://www.grnet.gr/el/ellak">"Ηλεκτρονικές Υπηρεσίες για την Ανάπτυξη και Διάδοση του Ανοιχτού Λογισμικού"</a> που υλοποιείται από την <a href="https://www.grnet.gr/">ΕΔΕΤ Α.Ε.</a> Επισκεφθείτε την σελίδα του έργου στο <a href="https://github.com/ellak-monades-aristeias/apospaseis">GitHub</a>
-					</p>		            
-                </div>
-            </div>
-        </div>  
-    </div>        
+     </div>  
     
+    </div>            
     <!-- /.container -->
 
     <footer>
