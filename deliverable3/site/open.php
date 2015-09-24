@@ -46,8 +46,9 @@
 
     <div class="brand">@pospaseis</div>
     <div class="address-bar">
-    <?php                                
-        $conn = new mysqli("userdb","stoug","#", "stoug-db1");                                                                                  						  
+    <?php                       
+        include("conf.php");             
+        $conn = new mysqli(HOST,USERNAME,DB_PWD, DATABASE);                                                                                  						  
         $result2 = $conn->query("SELECT COUNT(*) AS N FROM APOSPASI");
 		$row2 = $result2->fetch_assoc();			                
 		echo "Υπηρεσια αναζητησης ",$row2['N']," αποσπασεων εκπαιδευτικων";				                

@@ -45,8 +45,9 @@
 
     <div class="brand">@pospaseis</div>
     <div class="address-bar">
-    <?php                                
-        $conn = new mysqli("userdb","stoug","#", "stoug-db1");                                                                                  						  
+    <?php        
+        include("conf.php");                            
+        $conn = new mysqli(HOST,USERNAME,DB_PWD, DATABASE);                                                                                  						  
         $result2 = $conn->query("SELECT COUNT(*) AS N FROM APOSPASI");
 		$row2 = $result2->fetch_assoc();			                
 		echo "Υπηρεσια αναζητησης ",$row2['N']," αποσπασεων εκπαιδευτικων";				                
@@ -90,7 +91,7 @@
         <!-- /.container -->
     </nav>
 
-	 <?php			    
+	 <?php	
   	   if (!isset($_GET['sub'])){
 		 echo "<div class='container'>";
 		 echo "<div class='row'><div class='box'><div class='col-lg-12'>";  
@@ -99,14 +100,17 @@
 	     echo "</div>";
 	   }
 	   else{
+		  include("conf.php");     		     
+		  $conn = new mysqli(HOST,USERNAME,DB_PWD, DATABASE);   
+		  mysqli_set_charset($conn,"utf8");					      
+		  
 		  $sub = $_GET['sub'];
 		  if ($sub != 'Αναζήτηση αποσπάσεων'){
 			echo "<div class='container'>";
 		  } 
 		  else{
 		    echo "<div class='container-fluid'>";
-		  }			
-          $conn = new mysqli("userdb","stoug","#", "stoug-db1");                                                                                  						                                
+		  }		                                                                                          						  
                           						   
 		  $typeforeas = mysqli_real_escape_string($conn, $_GET['type_foreas']);		            
 		  $vathmida = mysqli_real_escape_string($conn, $_GET['vathmida']);
@@ -127,10 +131,8 @@
           $pr=$arr[0];
           $where=$arr[1];
                           
-	      $pr = substr($pr, 0, strlen($pr)-3);						  
-						  
-          $conn = new mysqli("userdb","stoug","#", "stoug-db1");                                                                                  						                                
-          mysqli_set_charset($conn,"utf8");					      
+	      $pr = substr($pr, 0, strlen($pr)-3);						  						  
+          
           $result = $conn->query("SELECT COUNT(*) AS N $where");
 		  $row = $result->fetch_assoc();
 		  $num_rows = $row['N'];
@@ -139,11 +141,9 @@
 		     echo "<p><strong>Βρέθηκαν ",$num_rows," αποσπάσεις</strong></p>";
 		     echo "</div></div></div>";
 		  }			                
-          $conn->close();  
+
   	 
     	 if ($sub == 'Αναζήτηση αποσπάσεων'){
-            $conn = new mysqli("userdb","stoug","#", "stoug-db1");                                                                                  						                                                                               						  
-            mysqli_set_charset($conn,"utf8");							
 		    $sqlcommand = "SELECT AM, LASTNAME, FIRSTNAME, VATHMIDA, KLADOS, APO, NAME, TYPE, YEAR_APOSPASI, COMMENT1, COMMENT2 $where ORDER BY YEAR_APOSPASI, TYPE, NAME";						 
             $result = $conn->query($sqlcommand);
 
@@ -197,8 +197,6 @@
 		    $sql3 = "SELECT VATHMIDA AS A, COUNT(*) AS N $where GROUP BY VATHMIDA ORDER BY VATHMIDA";
 		    $sql4 = "SELECT KLADOS AS A, COUNT(*) AS N $where GROUP BY KLADOS ORDER BY KLADOS";						
 						   
-            $conn = new mysqli("userdb","stoug","#", "stoug-db1");                                                                                  						                                                                                						  
-            mysqli_set_charset($conn,"utf8");		    
 		    echo "<div class='row'><div class='box'>";               
             echo "<div class='col-lg-12 text-center' >";		           
 		    printtable("Έτος",$sql1, $conn);
@@ -207,9 +205,9 @@
 		    printtable("Τοποθέτηση",$sql2, $conn);			  
 		    echo "</div>";
 		    echo "</div></div>";			  
-		    $conn->close();          
 	    }
 	    echo "</div>";
+	    $conn->close();          
      }
 				
      function buildq($typeforeas, $klados, $vathmida, $yearapospasi, $pou, $mitroo, $ln, $organiki, $fn){								

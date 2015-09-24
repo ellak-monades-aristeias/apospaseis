@@ -75,8 +75,9 @@ function clearAll(){
 
     <div class="brand">@pospaseis</div>
     <div class="address-bar">
-    <?php                                
-        $conn = new mysqli("userdb","stoug","#", "stoug-db1");                                                                                  						  
+    <?php      
+        include("conf.php");                              
+        $conn = new mysqli(HOST,USERNAME,DB_PWD, DATABASE);                                                                                  						  
         $result2 = $conn->query("SELECT COUNT(*) AS N FROM APOSPASI");
 		$row2 = $result2->fetch_assoc();			                
 		echo "Υπηρεσια αναζητησης ",$row2['N']," αποσπασεων εκπαιδευτικων";				                
@@ -125,11 +126,12 @@ function clearAll(){
     <div class="row">
     <div class="box">
                 
-    <?php                                                   
+    <?php 
+     include("conf.php");                                                     
      echo "<form name='frm' action='query_results.php' method='GET' onsubmit='return checkIfOk()'>";
                              
      echo "<div class='col-lg-12'><hr><h2 class='intro-text text-center'><strong>Αναζητηση αποσπασεων με κριτηρια</strong></h2><hr></div>";
-     $conn = new mysqli("userdb","stoug","#", "stoug-db1");                                                                                  						                                                                             						  
+     $conn = new mysqli(HOST,USERNAME,DB_PWD, DATABASE);                                                                                  						                                                                                  						                                                                             						  
      mysqli_set_charset($conn,"utf8");
                           
 	 $sqlcommand = "SELECT DISTINCT TYPE FROM FOREAS ORDER BY TYPE";
@@ -218,8 +220,9 @@ function clearAll(){
               <hr>                
 
 		      <table class='table table-striped table-hover'>	                                          					                            
-                 <?php  
-                 $conn = new mysqli("userdb","stoug","#", "stoug-db1");                                                                                  						      
+                 <?php 
+                 include("conf.php");    
+                 $conn = new mysqli(HOST,USERNAME,DB_PWD, DATABASE);                                                                                  						                                                                                    						      
                  mysqli_set_charset($conn,"utf8");
                  $result2 = $conn->query("SELECT * FROM ANAK ORDER BY D DESC");
                  echo "<tbody>";
@@ -233,7 +236,7 @@ function clearAll(){
 	             $conn->close();                                               
                  ?>   
               </table>    
-
+           </div>
         </div>
      </div>
 
