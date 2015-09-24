@@ -2,7 +2,9 @@
 
 <b>Υπηρεσία αναζήτησης αποσπάσεων εκπαιδευτικών</b>
 
-http://users.sch.gr/stoug/apospaseis/public_html/ 
+<p>http://users.sch.gr/stoug/apospaseis/public_html/</p>
+
+<p>Δείτε το χρονοδιάγραμμα του έργου στο wiki</p>
 
 <b>Περιγραφή Έργου</b>
 
