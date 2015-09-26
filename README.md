@@ -4,6 +4,8 @@
 
 <p>http://users.sch.gr/stoug/apospaseis/public_html/</p>
 
+<p>http://www.apospaseis.eu/</p>
+
 <p>Δείτε το χρονοδιάγραμμα του έργου στο wiki</p>
 
 <b>ίνητρα και συνεισφορά</b>
