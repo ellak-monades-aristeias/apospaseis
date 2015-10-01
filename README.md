@@ -2,9 +2,7 @@
 
 <b>Υπηρεσία αναζήτησης αποσπάσεων εκπαιδευτικών</b>
 
-<p>http://www.apospaseis.eu/</p>
-
-<p>http://users.sch.gr/stoug/apospaseis/public_html/</p>
+<p>http://apospaseis.ellak.gr/</p>
 
 <p>Δείτε την περιγραφή του έργου στο wiki</p>
 

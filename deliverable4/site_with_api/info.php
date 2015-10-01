@@ -194,15 +194,15 @@
               <p><strong>Τεχνολογίες</strong></p>
 
               <p class='small'>Η υπηρεσία αναπτύχθηκε αξιοποιώντας τεχνολογίες ανοιχτού λογισμικού. Συγκεκριμένα:
-              </p><p class='small'>για τη αποθήκευση των δεδομένων σχεδιάστηκε Βάση Δεδομένων (ΒΔ) αξιοποιώντας το σύστημα διαχείρισης ΒΔ MySQL (<a href="https://www.mysql.com/">https://www.mysql.com/</a>).
-              </p><p class='small'>για την εισαγωγή των αποσπάσεων παλαιότερων ετών στη ΒΔ, αναπτύχθηκαν PHP scripts.
-              </p><p class='small'>για την ανάπτυξη της διεπαφής της υπηρεσίας χρησιμοποιήθηκε η τεχνολογία HTML/CSS. Δόθηκε ιδιαίτερη έμφαση στο πως θα εμφανίζεται το web site σε διαφορετικές συσκευές (υπολογιστές, ταμπλέτες, κινητά τηλέφωνα). Για το λόγω αυτό θα αξιοποιήθηκε η τεχνολογία Bootstrap (<a href="http://getbootstrap.com/">http://getbootstrap.com/</a>)
+              </p><p class='small'>για τη αποθήκευση των δεδομένων σχεδιάστηκε Βάση Δεδομένων (ΒΔ) αξιοποιώντας το σύστημα διαχείρισης ΒΔ <a href="https://mariadb.org/">MariaDB</a>
+              </p><p class='small'>για την εισαγωγή των αποσπάσεων παλαιότερων ετών στη ΒΔ, αναπτύχθηκαν PHP scripts
+              </p><p class='small'>για την ανάπτυξη της διεπαφής της υπηρεσίας χρησιμοποιήθηκε η τεχνολογία HTML/CSS. Δόθηκε ιδιαίτερη έμφαση στο πως θα εμφανίζεται το web site σε διαφορετικές συσκευές (υπολογιστές, ταμπλέτες, κινητά τηλέφωνα). Για το λόγω αυτό θα αξιοποιήθηκε η τεχνολογία <a href="http://getbootstrap.com/">Bootstrap</a> 
               </p><p class='small'>για τον προγραμματισμό από την μεριά του εξυπηρετητή (server side programming) χρησιμοποιήθηκε η γλώσσα PHP
               </p><p class='small'>για τον προγραμματισμό από την μεριά του πελάτη (client side programming) χρησιμοποιήθηκε η γλώσσα Java Script
-              </p><p class='small'>για την ανάπτυξη του API ακολουθήθηκε η λογική REST (<a href="https://en.wikipedia.org/ wiki/Representational_state_transfer">https://en.wikipedia.org/ wiki/Representational_state_transfer</a>). Τα δεδομένα αποσπάσεων  ανακτώνται σε μορφή <a href=https://en.wikipedia.org/wiki/JSON>JSON</a> κατόπιν αποστολής <a href="apiinfo.php">κατάλληλου διαμορφωμένου http αιτήματος</a>
-              </p><p class='small'>η υπηρεσία αποτρέπει SQL injections (<a href="https://en.wikipedia.org/wiki/SQL_injection">https://en.wikipedia.org/wiki/SQL_injection</a>) μέσω προχωρημένων τεχνικών προγραμματισμού
-              </p><p class='small'>η υπηρεσία παρέχει στατιστικά χρήσης μέσω της υπηρεσίας google analytics (<a href="http://www.google.com/analytics/">http://www.google.com/analytics/</a>)
-              </p><p class='small'>η υπηρεσία φιλοξενείται σε υπολογιστή με λειτουργικό σύστημα Linux και με εξυπηρετητή ιστού apache (<a href="http://www.apache.org/">http://www.apache.org/</a>)
+              </p><p class='small'>για την ανάπτυξη του API ακολουθήθηκε η λογική <a href="https://en.wikipedia.org/ wiki/Representational_state_transfer">REST</a>. Τα δεδομένα αποσπάσεων  ανακτώνται σε μορφή <a href=https://en.wikipedia.org/wiki/JSON>JSON</a> κατόπιν αποστολής <a href="apiinfo.php">κατάλληλου διαμορφωμένου http αιτήματος</a>
+              </p><p class='small'>η υπηρεσία αποτρέπει <a href="https://en.wikipedia.org/wiki/SQL_injection">SQL injections</a> μέσω προχωρημένων τεχνικών προγραμματισμού
+              </p><p class='small'>η υπηρεσία παρέχει στατιστικά χρήσης μέσω της υπηρεσίας <a href="http://www.google.com/analytics/">google analytics</a>
+              </p><p class='small'>η υπηρεσία φιλοξενείται σε υπολογιστή με λειτουργικό σύστημα <a href="https://www.debian.org/">Linux/Debian</a> και με εξυπηρετητή ιστού <a href="http://www.apache.org/">apache</a>
               </p>
               <p><strong>Παραδοτέα</strong>
               </p><p class='small'><a href="https://github.com/ellak-monades-aristeias/apospaseis/tree/master/deliverable1"><strong>Π1</strong> Μελέτη που περιλαμβάνει τη διερεύνηση απαιτήσεων, τεκμηρίωση της σχεδίασης της υπηρεσίας και τις τεχνικές προδιαγραφές</a>
