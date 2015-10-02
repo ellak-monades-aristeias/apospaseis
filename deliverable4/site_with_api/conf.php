@@ -1,7 +1,7 @@
 <?php
    define( 'DB_PWD', 'yourpwd' );
    define( 'HOST', 'yourhost' );
-   define( 'USERNAME', 'yourusername' );
-   define( 'DATABASE', 'yourDB' );
+   define( 'USERNAME', 'username' );
+   define( 'DATABASE', 'yourdb' );
 ?>
 

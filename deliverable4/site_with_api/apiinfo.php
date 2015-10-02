@@ -105,53 +105,42 @@
                     </h2>
                     <hr>	
                     <p><strong>Γενικά</strong></p>
-                    <p>		
-					<small>				
-					Το @pospaseis προσφέρει μια διεπαφή προγραμματισμού εφαρμογής (Application Programming Interface-API) που παρέχει έναν εύχρηστο τρόπο ανάκτησης των αποτελεσμάτων μιας αναζήτησης σε μορφή <a href=https://en.wikipedia.org/wiki/JSON>JSON</a>. Έτσι, To @pospaseis δίνει τη δυνατότητα σε οποιονδήποτε προγραμματιστή να πραγματοποιήσει αναζητήσεις μέσα από την εφαρμογή του ή το site του. 					
-					</small>
+                    <p class="small">								
+					Το @pospaseis προσφέρει μια διεπαφή προγραμματισμού εφαρμογής (Application Programming Interface-API) που παρέχει έναν εύχρηστο τρόπο ανάκτησης των αποτελεσμάτων μιας αναζήτησης σε μορφή <a href=https://en.wikipedia.org/wiki/JSON>JSON</a>. Έτσι, To @pospaseis δίνει τη δυνατότητα σε οποιονδήποτε προγραμματιστή να πραγματοποιήσει αναζητήσεις μέσα από την εφαρμογή του ή το site του. 										
 					</p><br>
-					<p><strong>Οδηγίες χρήσης του API</strong></p>  
-					<small> 
-					<p>
+					<p class="small"><strong>Οδηγίες χρήσης του API</strong></p>  					
+					<p class="small">
 					Το API του @pospaseis ακολουθεί την λογική <a href="https://en.wikipedia.org/wiki/Representational_state_transfer">REST</a>. Ως εκ τούτου, 
 					η χρήση του API είναι ιδιαίτερα απλή: Αρκεί κάποιος να κάνει ένα αίτημα http στο script που βρίσκεται στη διεύθυνση:</p>
-					<p align=center><a href="api.php">http://www.apospaseis.eu/api.php</a></p>
-					<p>με τις εξής παραμέτρους:
+					<p class="text-center small"><a href="api.php">http://www.apospaseis.eu/api.php</a></p>
+					<p class="small">με τις εξής παραμέτρους:
 					<br><strong>search_type</strong> (Υποχρεωτική): Η τιμή μπορεί να είναι είτε <i>search</i> είτε <i>statistics</i> και δηλώνει αν ο χρήστης επιθυμεί την ανάκτηση των δεδομένων των αποσπάσεων ή των στατιστικών στοιχείων των αποσπάσεων
 					<br><strong>am: </strong> (Προαιρετική): Επιτρέπει την αναζήτηση βάσει του αριθμού μητρώου του εκπαιδευτικού
 					<br><strong>lastname: </strong> (Προαιρετική): Επιτρέπει την αναζήτηση βάσει του επώνυμου του εκπαιδευτικού. Η αναζήτηση στη βάση δεδομένων γίνεται με βάση του τελεστή SQL LIKE. Έτσι δεν είναι απαραίτητο το επώνυμο να πληκτρολογηθεί ακριβώς όπως είναι καταχωρημένο στη βάση δεδομένων
 					<br><strong>firstname: </strong> (Προαιρετική): Επιτρέπει την αναζήτηση βάσει του ονόματος του εκπαιδευτικού. Η αναζήτηση στη βάση δεδομένων γίνεται με βάση του τελεστή SQL LIKE. Έτσι δεν είναι απαραίτητο το όνομα να πληκτρολογηθεί ακριβώς όπως είναι καταχωρημένο στη βάση δεδομένων
 					<br><strong>vathmida: </strong> (Προαιρετική): Παίρνει τιμή είτε ΔΕ είτε ΠΕ δηλώνοντας αν ο εκπαιδευτικός ανήκει στην Δευτεροβάθμια εκπαίδευση ή στην Πρωτοβάθμια. Με αυτό τον τρόπο επιτρέπεται η αναζήτηση βάσει βαθμίδας εκπαίδευσης
-					<br><strong>eidikotita: </strong> (Προαιρετική): Επιτρέπει την αναζήτηση βάσει ειδικότητας. Δείτε <a href="http://localhost:8050/apospaseis/query_results.php?type_foreas=&vathmida=&klados=&year_apospasi=&organiki=&pou=&mitroo=&lastname=&firstname=&sub=%CE%91%CE%BD%CE%B1%CE%B6%CE%AE%CF%84%CE%B7%CF%83%CE%B7+%CF%83%CF%84%CE%B1%CF%84%CE%B9%CF%83%CF%84%CE%B9%CE%BA%CF%8E%CE%BD">εδώ</a> τις ειδικότητες των εκπαιδευτικών
+					<br><strong>eidikotita: </strong> (Προαιρετική): Επιτρέπει την αναζήτηση βάσει ειδικότητας. Δείτε <a href="http://localhost:8050/apospaseis/query_results.php?type_foreas=&amp;vathmida=&amp;klados=&amp;year_apospasi=&amp;organiki=&amp;pou=&amp;mitroo=&amp;lastname=&amp;firstname=&amp;sub=%CE%91%CE%BD%CE%B1%CE%B6%CE%AE%CF%84%CE%B7%CF%83%CE%B7+%CF%83%CF%84%CE%B1%CF%84%CE%B9%CF%83%CF%84%CE%B9%CE%BA%CF%8E%CE%BD">εδώ</a> τις ειδικότητες των εκπαιδευτικών
 					<br><strong>organiki: </strong>	(Προαιρετική): Επιτρέπει την αναζήτηση βάσει της οργανικής θέσης, ή καλύτερα, βάσει του από που μετακινήθηκε ο εκπαιδευτικός στη νέα του θέση. Η αναζήτηση στη βάση δεδομένων γίνεται με βάση του τελεστή SQL LIKE. Έτσι δεν είναι απαραίτητο το πεδίο να πληκτρολογηθεί ακριβώς όπως είναι καταχωρημένο στη βάση δεδομένων
 					<br><strong>year_apospasi: </strong> (Προαιρετική): Επιτρέπει την αναζήτηση βάσει σχολικού έτους απόσπασης. Το έτος απόσπασης έχει μορφή  2015-2016
 					<br><strong>foreas: </strong> (Προαιρετική): Επιτρέπει την αναζήτηση βάσει του φορέα απόσπασης (που αποσπάσθηκε ο εκπαιδευτικός). Η αναζήτηση στη βάση δεδομένων γίνεται με βάση του τελεστή SQL LIKE. Έτσι δεν είναι απαραίτητο ο φορέας απόσπασης να πληκτρολογηθεί ακριβώς όπως είναι καταχωρημένο στη βάση δεδομένων
-					<br><strong>type: </strong> (Προαιρετική): Επιτρέπει την αναζήτηση βάσει του τύπου απόσπασης. Δείτε <a href="http://localhost:8050/apospaseis/query_results.php?type_foreas=&vathmida=&klados=&year_apospasi=&organiki=&pou=&mitroo=&lastname=&firstname=&sub=%CE%91%CE%BD%CE%B1%CE%B6%CE%AE%CF%84%CE%B7%CF%83%CE%B7+%CF%83%CF%84%CE%B1%CF%84%CE%B9%CF%83%CF%84%CE%B9%CE%BA%CF%8E%CE%BD">εδώ</a> τους πιθανούς τύπους απόσπασης					
-					</small>
+					<br><strong>type: </strong> (Προαιρετική): Επιτρέπει την αναζήτηση βάσει του τύπου απόσπασης. Δείτε <a href="http://localhost:8050/apospaseis/query_results.php?type_foreas=&amp;vathmida=&amp;klados=&amp;year_apospasi=&amp;organiki=&amp;pou=&amp;mitroo=&amp;lastname=&amp;firstname=&amp;sub=%CE%91%CE%BD%CE%B1%CE%B6%CE%AE%CF%84%CE%B7%CF%83%CE%B7+%CF%83%CF%84%CE%B1%CF%84%CE%B9%CF%83%CF%84%CE%B9%CE%BA%CF%8E%CE%BD">εδώ</a> τους πιθανούς τύπους απόσπασης					
+					
 					</p><br>
 					<p><strong>Παραδείγματα</strong></p>
-					<p>
-					<small>	
+					<p class="small"> 					
 					Αναζήτηση των αποσπάσεων του έτους 2014-2016 των εκπαιδευτικών πληροφορικής (ΠΕ19-20) που έγιναν στα Πανεπιστήμια-ΤΕΙ<br>
-					<a href="api.php?search_type=search&eidikotita=ΠΕ19-20&type=Πανεπιστήμια-ΤΕΙ&year_apospasi=2015-2016">http://www.apospaseis.eu/api.php?search_type=search&eidikotita=ΠΕ19-20&type=Πανεπιστήμια-ΤΕΙ&year_apospasi=2015-2016</a>
-					</small>
+					<a href="api.php?search_type=search&amp;eidikotita=ΠΕ19-20&amp;type=Πανεπιστήμια-ΤΕΙ&amp;year_apospasi=2015-2016">http://www.apospaseis.eu/api.php?search_type=search&amp;eidikotita=ΠΕ19-20&amp;type=Πανεπιστήμια-ΤΕΙ&amp;year_apospasi=2015-2016</a>
 					</p>
-					<p>
-					<small>	
+					<p class="small">
 					Αναζήτηση στατιστικών για τις αποσπάσεις των εκπαιδευτικών πληροφορικής (ΠΕ19-20)<br>
-					<a href="api.php?search_type=statistics&eidikotita=ΠΕ19-20">http://www.apospaseis.eu/api.php?search_type=statistics&eidikotita=ΠΕ19-20</a>
-					</small>
-					<p>
-					<small>	
+					<a href="api.php?search_type=statistics&amp;eidikotita=ΠΕ19-20">http://www.apospaseis.eu/api.php?search_type=statistics&amp;eidikotita=ΠΕ19-20</a>
+					<p class="small">
 					Αναζήτηση των αποσπάσεων που έχουν πάρει οι εκπαιδευτικοί με επώνυμο που περιέχει του χαρακτήρες "παδόπουλο"<br>
-					<a href="api.php?search_type=search&lastname=παδόπουλο">http://www.apospaseis.eu/api.php?search_type=search&lastname=παδόπουλο</a>
-					</small>					
+					<a href="api.php?search_type=search&amp;lastname=παδόπουλο">http://www.apospaseis.eu/api.php?search_type=search&amp;lastname=παδόπουλο</a>
 					</p>
-					<p>
-					<small>	
+					<p class="small">
 					Αναζήτηση των αποσπάσεων που έχουν πάρει ο εκπαιδευτικός με αριθμό μητρώου 567891<br>
-					<a href="api.php?search_type=search&am=567891">http://www.apospaseis.eu/api.php?search_type=search&am=567891</a>
-					</small>					
+					<a href="api.php?search_type=search&amp;am=567891">http://www.apospaseis.eu/api.php?search_type=search&amp;am=567891</a>
 					</p>					
                 </div>
             </div>

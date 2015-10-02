@@ -247,26 +247,26 @@ function clearAll(){
         <div class="box">
            <div class="col-sm-3 col-xs-6">					
               <a href=https://ma.ellak.gr/>
-                 <img src="img/ma.jpg" width=140, height=100>
+                 <img src="img/ma.jpg" alt="ma" width=140 height=100>
               </a>
            </div>   
            <div class="col-sm-3 col-xs-6">					
               <a href="https://ellak.gr/">
-			     <img src="img/elak.jpg" width=140, height=100>
+			     <img src="img/elak.jpg" alt="ellak" width=140 height=100>
 			  </a>
 		   </div>	
 		   <div class="col-sm-3 col-xs-6">					
 			  <a href="https://www.grnet.gr/">
-				 <img src="img/grnet.jpg" width=140, height=100>
+				 <img src="img/grnet.jpg" alt="grnet" width=140 height=100>
 			  </a>
 		   </div>	
 		   <div class="col-sm-3 col-xs-6">					
 			   <a href="http://www.digitalplan.gov.gr">
-				  <img src="img/ps.jpeg" width=140, height=100>
+				  <img src="img/ps.jpeg" alt="digitalplan" width=140 height=100>
 			   </a>
 			</div>
 			<div class="col-lg-12">						
-		       <p class='small' align=center>
+		       <p class='small text-center'>
 			      To <a href="index.php">@pospaseis</a> αναπτύχθηκε στα πλαίσια του 
 				  υπο-έργου "Χρηματική Ενίσχυση για έργα ανάπτυξης ΕΛ/ΛΑΚ" του έργου 
 				  <a href="https://www.grnet.gr/el/ellak">"Ηλεκτρονικές Υπηρεσίες για 

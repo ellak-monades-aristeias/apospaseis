@@ -101,29 +101,29 @@
             <div class="box">
                 <div class="col-sm-3 col-xs-6">					
                     <a href=https://ma.ellak.gr/>
-                       <img src="img/ma.jpg" width=140, height=100>
+                       <img src="img/ma.jpg" alt="ma" width=140 height=100>
                     </a>
                  </div>   
                  <div class="col-sm-3 col-xs-6">					
                     <a href="https://ellak.gr/">
-						<img src="img/elak.jpg" width=140, height=100>
+						<img src="img/elak.jpg" alt="ellak" width=140 height=100>
 					</a>
 				 </div>	
 				 <div class="col-sm-3 col-xs-6">					
 					<a href="https://www.grnet.gr/">
-						<img src="img/grnet.jpg" width=140, height=100>
+						<img src="img/grnet.jpg" alt="grnet" width=140 height=100>
 					</a>
 				 </div>	
 				 <div class="col-sm-3 col-xs-6">					
 					<a href="http://www.digitalplan.gov.gr">
-						<img src="img/ps.jpeg" width=140, height=100>
+						<img src="img/ps.jpeg" alt="digitalplan" width=140 height=100>
 					</a>
 				 </div>
 				 <div class="col-lg-12">						
-		            <p align=center>
+		            <p class="text-center">
 						To <a href="index.php">@pospaseis</a> αναπτύχθηκε στα πλαίσια του υπο-έργου "Χρηματική Ενίσχυση για έργα ανάπτυξης ΕΛ/ΛΑΚ" του έργου <a href="https://www.grnet.gr/el/ellak">"Ηλεκτρονικές Υπηρεσίες για την Ανάπτυξη και Διάδοση του Ανοιχτού Λογισμικού"</a> που υλοποιείται από την <a href="https://www.grnet.gr/">ΕΔΕΤ Α.Ε.</a> 						
 					</p>		            
-					<p align=center>
+					<p class="text-center">
 					Επισκεφθείτε την σελίδα του έργου στο <a href="https://github.com/ellak-monades-aristeias/apospaseis">GitHub</a>
 					</p>
                 </div>
@@ -199,7 +199,7 @@
               </p><p class='small'>για την ανάπτυξη της διεπαφής της υπηρεσίας χρησιμοποιήθηκε η τεχνολογία HTML/CSS. Δόθηκε ιδιαίτερη έμφαση στο πως θα εμφανίζεται το web site σε διαφορετικές συσκευές (υπολογιστές, ταμπλέτες, κινητά τηλέφωνα). Για το λόγω αυτό θα αξιοποιήθηκε η τεχνολογία <a href="http://getbootstrap.com/">Bootstrap</a> 
               </p><p class='small'>για τον προγραμματισμό από την μεριά του εξυπηρετητή (server side programming) χρησιμοποιήθηκε η γλώσσα PHP
               </p><p class='small'>για τον προγραμματισμό από την μεριά του πελάτη (client side programming) χρησιμοποιήθηκε η γλώσσα Java Script
-              </p><p class='small'>για την ανάπτυξη του API ακολουθήθηκε η λογική <a href="https://en.wikipedia.org/ wiki/Representational_state_transfer">REST</a>. Τα δεδομένα αποσπάσεων  ανακτώνται σε μορφή <a href=https://en.wikipedia.org/wiki/JSON>JSON</a> κατόπιν αποστολής <a href="apiinfo.php">κατάλληλου διαμορφωμένου http αιτήματος</a>
+              </p><p class='small'>για την ανάπτυξη του API ακολουθήθηκε η λογική <a href="https://en.wikipedia.org/wiki/Representational_state_transfer">REST</a>. Τα δεδομένα αποσπάσεων  ανακτώνται σε μορφή <a href=https://en.wikipedia.org/wiki/JSON>JSON</a> κατόπιν αποστολής <a href="apiinfo.php">κατάλληλου διαμορφωμένου http αιτήματος</a>
               </p><p class='small'>η υπηρεσία αποτρέπει <a href="https://en.wikipedia.org/wiki/SQL_injection">SQL injections</a> μέσω προχωρημένων τεχνικών προγραμματισμού
               </p><p class='small'>η υπηρεσία παρέχει στατιστικά χρήσης μέσω της υπηρεσίας <a href="http://www.google.com/analytics/">google analytics</a>
               </p><p class='small'>η υπηρεσία φιλοξενείται σε υπολογιστή με λειτουργικό σύστημα <a href="https://www.debian.org/">Linux/Debian</a> και με εξυπηρετητή ιστού <a href="http://www.apache.org/">apache</a>

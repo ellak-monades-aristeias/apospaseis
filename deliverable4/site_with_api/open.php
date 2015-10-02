@@ -103,9 +103,9 @@
 		              <table class='table table-striped table-hover'>	                                          					
                          <?php  
                          $path = $_GET['path'];                             
-                         echo "<thead>";
-                         echo "<strong><th>Αποφάσεις ",substr(strrchr($path,'apof/'),5),"</th></strong>";
-                         echo "</thead>";   
+                         echo "<thead><tr>";
+                         echo "<td class='text-left'>Αποφάσεις ",substr(strrchr($path,'apof/'),5),"</td>";
+                         echo "</tr></thead>";   
                          echo "<tbody>";	
                          $files = scandir("$path/");               
                          foreach($files as $entry) {                     

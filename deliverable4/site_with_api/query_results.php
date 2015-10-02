@@ -154,8 +154,8 @@
             echo "<div class='col-lg-12'>";
 		    echo "<div class='table-responsive'>";        
 		    echo "<table class='table table-condensed table-striped table-hover'>";
-		    echo "<thead>";
-	        echo "<strong>";
+		    echo "<thead><tr>";
+	        
 	        echo "<th>Απ</th>";	        
 	        echo "<th>ΑΜ</th>"; 
             echo "<th>Επώνυμο</th>";
@@ -168,13 +168,13 @@
 	        echo "<th>Έτος</th>";	
 	        echo "<th>Σχ.1</th>";	
 	        echo "<th>Σχ.2</th>";
-	        echo "</strong>";	
-	        echo "</thead>";
+	        
+	        echo "</tr></thead>";
 		    echo "<tbody>";					
      	     
   	        while ($row = $result->fetch_assoc()) {		
 			  echo "<tr>";
-              echo "<td class='small'><a href='open.php?path=apof/",$row['YEAR_APOSPASI'],"/",$row['TYPE'],"'><img src=img/f.png></a></td>";																		
+              echo "<td class='small'><a href='open.php?path=apof/",$row['YEAR_APOSPASI'],"/",$row['TYPE'],"'><img src=img/f.png alt='arxeio'></a></td>";																		
 		   	  echo "<td class='small'>",$row['AM'],"</td>"; 
 			  echo "<td class='small'>",$row['LASTNAME'],"</td>";
 			  echo "<td class='small'>",$row['FIRSTNAME'],"</td>";
@@ -260,29 +260,28 @@
 		$result = $conn->query($sql);
 	    echo "<div class='table-responsive'>";        
 		echo "<table class='table table-striped'>";				
-		echo "<thead>";
-	    echo "<strong>";
-		echo "<th colspan=2>Αποσπάσεις ανα $textfield</th>";
+		echo "<thead>";		
 		if ($textfield != "Έτος"){						
-		   echo "<tr><th class='text-center'>$textfield</th><th class='text-center'>Πλήθος αποσπάσεων</th><tr>";
+		   echo "<tr><th colspan=2>Αποσπάσεις ανα $textfield</th></tr>";	
+		   echo "<tr><th class='text-center'>$textfield</th><th class='text-center'>Πλήθος αποσπάσεων</th></tr>";
 	    }
 	    else{
-		   echo "<tr><th class='text-center'>$textfield</th><th class='text-center'>Πλήθος αποσπάσεων</th><th class='text-center'>Αποφάσεις</th><tr>";
+		   echo "<tr><th colspan=3>Αποσπάσεις ανα $textfield</th></tr>";	
+		   echo "<tr><th class='text-center'>$textfield</th><th class='text-center'>Πλήθος αποσπάσεων</th><th class='text-center'>Αποφάσεις</th></tr>";
 		}
-	    echo "</strong>";	
 	    echo "</thead>";
 		echo "<tbody>";				
 		$i=0;
 		while ($row = $result->fetch_assoc()){
           echo "<tr>";			
           if ($textfield != "Έτος"){								
-	         echo "<td width='50%'>",$row['A'],"</td>"; 								
-		     echo "<td width='50%'>",$row['N'],"</td>"; 
+	         echo "<td style='width: 50%'>",$row['A'],"</td>"; 								
+		     echo "<td style='width: 50%'>",$row['N'],"</td>"; 
 	      }
 	      else{
-	         echo "<td width='35%'>",$row['A'],"</td>"; 								
-		     echo "<td width='35%'>",$row['N'],"</td>"; 			  
-		     echo "<td width='30%'><a href='open.php?path=apof/",$row['A'],"'><img src='img/f.png'></a></td>"; 			  
+	         echo "<td style='width: 35%'>",$row['A'],"</td>"; 								
+		     echo "<td style='width: 35%'>",$row['N'],"</td>"; 			  
+		     echo "<td style='width: 35%'><a href='open.php?path=apof/",$row['A'],"'><img src='img/f.png' alt='arxeio'></a></td>"; 			  
 		  }
 		  echo "</tr>";								
 		}
