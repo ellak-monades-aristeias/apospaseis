@@ -21,7 +21,7 @@ H υπηρεσία απευθύνεται κυρίως σε εκπαιδευτι
 <h2>Χρησιμά URLs</h2>
 
 <ul type=circle>
-<li>Η υπηρεσία είναι διαθέσιμη στο URL href="http://apospaseis.ellak.gr
+<li>Η υπηρεσία είναι διαθέσιμη στο URL http://apospaseis.ellak.gr
 </li>
 <li> Το URL του έργου στο GitHub είναι https://github.com/ellak-monades-aristeias/apospaseis/
 </li>
