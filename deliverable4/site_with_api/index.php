@@ -133,14 +133,14 @@ function clearAll(){
      include("conf.php");                                                     
      echo "<form name='frm' action='query_results.php' method='GET' onsubmit='return checkIfOk()'>";
                              
-     echo "<div class='col-lg-12'><hr><h2 class='intro-text text-center'><strong>Αναζητηση αποσπασεων με κριτηρια</strong></h2><hr></div>";
+     echo "<div class='col-lg-12'><h2 class='intro-text text-center'><strong>Αναζητηση αποσπασεων με κριτηρια</strong></h2></div>";
      $conn = new mysqli(HOST,USERNAME,DB_PWD, DATABASE);                                                                                  						                                                                                  						                                                                             						  
      mysqli_set_charset($conn,"utf8");
                           
 	 $sqlcommand = "SELECT DISTINCT TYPE FROM FOREAS ORDER BY TYPE";
      $result = $conn->query($sqlcommand);					      					      
-     echo "<div class='col-md-4 text-right'><label>Τύπος Απόσπασης:</label></div>";
-     echo "<div class='col-md-8'>";
+     echo "<div class='col-lg-4 text-right'><label>Τύπος Απόσπασης:</label></div>";
+     echo "<div class='col-lg-8'>";
      echo "<select id=t1 name=type_foreas class='form-control'>";
      echo "<option value='' SELECTED>Όλες</option>";
      while ($row = $result->fetch_assoc()){
@@ -150,8 +150,8 @@ function clearAll(){
      
      $sqlcommand = "SELECT DISTINCT VATHMIDA FROM TEACHER ORDER BY VATHMIDA";
 	 $result = $conn->query($sqlcommand);					      
-	 echo "<div class='col-md-4 text-right'><label>Βαθμίδα εκπαίδευσης:</label></div>";
-     echo "<div class='col-md-8'>";
+	 echo "<div class='col-lg-4  text-right'><label>Βαθμίδα εκπαίδευσης:</label></div>";
+     echo "<div class='col-lg-8 '>";
      echo "<select id=t2 name=vathmida class='form-control'>";
      echo "<option value='' SELECTED>Όλες</option>";
      while ($row = $result->fetch_assoc()){
@@ -161,8 +161,8 @@ function clearAll(){
                           
      $sqlcommand = "SELECT DISTINCT KLADOS FROM TEACHER ORDER BY KLADOS";
 	 $result = $conn->query($sqlcommand);					      
-	 echo "<div class='col-md-4 text-right'><label>Ειδικότητα εκπαιδευτικού:</label></div>";
-     echo "<div class='col-md-8'>";
+	 echo "<div class='col-lg-4 text-right'><label>Ειδικότητα εκπαιδευτικού:</label></div>";
+     echo "<div class='col-lg-8 '>";
      echo "<select id=t3 name=klados class='form-control'>";
      echo "<option value='' SELECTED>Όλες</option>";
      while ($row = $result->fetch_assoc()){
@@ -172,8 +172,8 @@ function clearAll(){
                           
 	 $sqlcommand = "SELECT DISTINCT YEAR_APOSPASI FROM APOSPASI ORDER BY YEAR_APOSPASI";
 	 $result = $conn->query($sqlcommand);		      
-	 echo "<div class='col-md-4 text-right'><label>Σχολικό έτος απόσπασης:</label></div>";
-     echo "<div class='col-md-8'>";
+	 echo "<div class='col-lg-4  text-right'><label>Σχολικό έτος απόσπασης:</label></div>";
+     echo "<div class='col-lg-8 '>";
      echo "<select id=t4 name=year_apospasi class='form-control'>";
      echo "<option value='' SELECTED>Όλα</option>";
      while ($row = $result->fetch_assoc()){
@@ -181,31 +181,31 @@ function clearAll(){
 	 }					      
      echo "</select></div>";                                                        
 
-	 echo "<div class='col-md-4 text-right'><label>Οργανική θέση εκπαιδευτικού:</label></div>";
-     echo "<div class='col-md-8'>";                        
+	 echo "<div class='col-lg-4   text-right'><label>Οργανική θέση εκπαιδευτικού:</label></div>";
+     echo "<div class='col-lg-8 '>";                        
      echo "<input id=t8 type=text  name=organiki class='form-control'>";
      echo "</div>";                           
                           
-	 echo "<div class='col-md-4 text-right'><label>Φορέας απόσπασης/ΠΥΣΠΕ/ΠΥΣΔΕ:</label></div>";
-     echo "<div class='col-md-8'>";                          
+	 echo "<div class='col-lg-4  text-right'><label>Φορέας απόσπασης/ΠΥΣΠΕ/ΠΥΣΔΕ:</label></div>";
+     echo "<div class='col-lg-8 '>";                          
      echo "<input id=t5 type=text  name=pou class='form-control'>";
      echo "</div>";                                                        
                           
-     echo "<div class='col-md-4 text-right'><label>Αριθμός μητρώου εκπαιδευτικού:</label></div>";
-     echo "<div class='col-md-8'>";                        
+     echo "<div class='col-lg-4  text-right'><label>Αριθμός μητρώου εκπαιδευτικού:</label></div>";
+     echo "<div class='col-lg-8 '>";                        
      echo "<input id=t6 type=text name=mitroo class='form-control'>";
      echo "</div>";                                                    
 
-     echo "<div class='col-md-4 text-right'><label>Επώνυμο εκπαιδευτικού:</label></div>";
-     echo "<div class='col-md-8'>";                     
+     echo "<div class='col-lg-4 text-right'><label>Επώνυμο εκπαιδευτικού:</label></div>";
+     echo "<div class='col-lg-8 '>";                     
      echo "<input id=t7 type=text name=lastname class='form-control'>";
      echo "</div>";     
                           
-     echo "<div class='col-md-4 text-right'><label>Όνομα εκπαιδευτικού:</label></div>";
-     echo "<div class='col-md-8'>";                             
+     echo "<div class='col-lg-4  text-right'><label>Όνομα εκπαιδευτικού:</label></div>";
+     echo "<div class='col-lg-8 '>";                             
      echo "<input id=t11 type=text name=firstname class='form-control'>";
      echo "</div>";         
-     echo "<div class='col-lg-12 text-center'><hr><input name=sub type=submit value='Αναζήτηση αποσπάσεων' class='btn btn-default'><input name=sub type=submit value='Αναζήτηση στατιστικών' class='btn btn-default'><input type='button' value='Επαναφόρα' class='btn btn-default' onclick='clearAll()'></div>";
+     echo "<div class='col-lg-12 text-center'><input name=sub type=submit value='Αναζήτηση αποσπάσεων' class='btn btn-default'><input name=sub type=submit value='Αναζήτηση στατιστικών' class='btn btn-default'><input type='button' value='Επαναφόρα' class='btn btn-default' onclick='clearAll()'></div>";
      echo"</form>";
                           
      $conn->close();          

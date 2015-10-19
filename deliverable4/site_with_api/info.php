@@ -132,12 +132,12 @@
 		
         <div class="row">
             <div class="box">
-                <div class="col-lg-12">
+                <div class="col-xs-12">
                     <hr>
                     <h2 class="intro-text text-center">
                         <strong>Ομαδα εργου</strong>
                     </h2>
-                    <hr>
+                    <hr>   
                 </div>
                 <div class="col-md-2 col-sm-4" >
                     <img class="img-responsive img-border-left" src="img/stoug.jpg" width=100 alt="">               
@@ -155,7 +155,7 @@
                     <p>Καθηγητής<br>Τμήμα Εφαρμοσμένης Πληροφορικής<br>Πανεπιστήμιο Μακεδονίας</p>
                     <p>W: <a href="http://users.uom.gr/~gevan">http://users.uom.gr/~gevan</a><br>E: <a href="mailto:gevan@uom.gr">gevan (at) uom.gr</a><p>                       
                 </div>      
-                <div class="col-lg-12 text-center">
+                <div class="col-xs-12 text-center">
                     <p>Ευχαριστούμε τον <a href="http://vbanos.gr/%CE%B1%CF%81%CF%87%CE%B9%CE%BA%CE%AE-%CF%83%CE%B5%CE%BB%CE%AF%CE%B4%CE%B1/">Βαγγέλη Μπάνο</a> για την πολύτιμη βοήθεια του</p>
                 </div>                
                 <div class="clearfix"></div>
