@@ -133,7 +133,7 @@ function clearAll(){
      include("conf.php");                                                     
      echo "<form name='frm' action='query_results.php' method='GET' onsubmit='return checkIfOk()'>";
                              
-     echo "<div class='col-lg-12'><h2 class='intro-text text-center'><strong>Αναζητηση αποσπασεων με κριτηρια</strong></h2></div>";
+     echo "<div class='col-lg-12'><hr><h2 class='intro-text text-center'><strong>Αναζητηση αποσπασεων με κριτηρια</strong></h2><hr></div>";
      $conn = new mysqli(HOST,USERNAME,DB_PWD, DATABASE);                                                                                  						                                                                                  						                                                                             						  
      mysqli_set_charset($conn,"utf8");
                           
@@ -205,7 +205,7 @@ function clearAll(){
      echo "<div class='col-lg-8 '>";                             
      echo "<input id=t11 type=text name=firstname class='form-control'>";
      echo "</div>";         
-     echo "<div class='col-lg-12 text-center'><input name=sub type=submit value='Αναζήτηση αποσπάσεων' class='btn btn-default'><input name=sub type=submit value='Αναζήτηση στατιστικών' class='btn btn-default'><input type='button' value='Επαναφόρα' class='btn btn-default' onclick='clearAll()'></div>";
+     echo "<div class='col-lg-12 text-center'><hr><input name=sub type=submit value='Αναζήτηση αποσπάσεων' class='btn btn-default'><input name=sub type=submit value='Αναζήτηση στατιστικών' class='btn btn-default'><input type='button' value='Επαναφόρα' class='btn btn-default' onclick='clearAll()'></div>";
      echo"</form>";
                           
      $conn->close();          
