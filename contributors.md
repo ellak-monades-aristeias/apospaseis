@@ -7,4 +7,4 @@
 <li><a href="https://github.com/ellak-monades-aristeias/apospaseis/wiki/%CE%98%CE%AD%CE%BC%CE%B1%CF%84%CE%B1-%CF%83%CF%87%CE%B5%CE%B4%CE%AF%CE%B1%CF%83%CE%B7%CF%82">Θέματα σχδίασης</a></li>
 </ul>
 
-Αν θέλετε να προτείνετε βελτιώσεις στη χρήση του @pospaseis ή θέλετε να αναφέρετε κάποια δυσλειτουργία ή πρόβλημα στη χρήση παρακάλώ κάντε το προσθέτοντας ένα issue <a href="https://github.com/issues">εδώ</a>
+Αν θέλετε να προτείνετε βελτιώσεις στη χρήση του @pospaseis ή θέλετε να αναφέρετε κάποια δυσλειτουργία ή πρόβλημα στη χρήση παρακάλώ κάντε το προσθέτοντας ένα issue <a href="https://github.com/ellak-monades-aristeias/apospaseis/issues">εδώ</a>
