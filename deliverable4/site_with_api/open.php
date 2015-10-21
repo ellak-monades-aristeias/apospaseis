@@ -134,7 +134,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <p>Copyright &copy; @pospaseis 2015 - Designed using <a href="http://startbootstrap.com/template-categories/all/">Bootstrap templates</a></p>
+                    <p><a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="img/cc.png"  alt="cc"></a> @pospaseis 2015 - Designed using <a href="http://startbootstrap.com/template-categories/all/">Bootstrap templates</a></p>
                 </div>
             </div>
         </div>
