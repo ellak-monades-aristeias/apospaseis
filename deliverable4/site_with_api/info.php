@@ -99,22 +99,17 @@
 		
         <div class="row text-center" >
             <div class="box">
-                <div class="col-sm-3 col-xs-6">					
+                <div class="col-sm-4 col-xs-4">					
                     <a href=https://ma.ellak.gr/>
                        <img src="img/ma.jpg" alt="ma" width=140 height=100>
                     </a>
                  </div>   
-                 <div class="col-sm-3 col-xs-6">					
-                    <a href="https://ellak.gr/">
-						<img src="img/elak.jpg" alt="ellak" width=140 height=100>
-					</a>
-				 </div>	
-				 <div class="col-sm-3 col-xs-6">					
+				 <div class="col-sm-4 col-xs-4">					
 					<a href="https://www.grnet.gr/">
 						<img src="img/grnet.jpg" alt="grnet" width=140 height=100>
 					</a>
 				 </div>	
-				 <div class="col-sm-3 col-xs-6">					
+				 <div class="col-sm-4 col-xs-4">					
 					<a href="http://www.digitalplan.gov.gr">
 						<img src="img/ps.jpeg" alt="digitalplan" width=140 height=100>
 					</a>
