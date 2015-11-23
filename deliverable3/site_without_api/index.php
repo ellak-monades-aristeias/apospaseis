@@ -129,8 +129,7 @@ function clearAll(){
     <div class="row">
     <div class="box">
                 
-    <?php 
-     include("conf.php");                                                     
+    <?php                                                     
      echo "<form name='frm' action='query_results.php' method='GET' onsubmit='return checkIfOk()'>";
                              
      echo "<div class='col-lg-12'><hr><h2 class='intro-text text-center'><strong>Αναζητηση αποσπασεων με κριτηρια</strong></h2><hr></div>";
@@ -223,8 +222,7 @@ function clearAll(){
               <hr>                
 
 		      <table class='table table-striped table-hover'>	                                          					                            
-                 <?php 
-                 include("conf.php");    
+                 <?php                 
                  $conn = new mysqli(HOST,USERNAME,DB_PWD, DATABASE);                                                                                  						                                                                                    						      
                  mysqli_set_charset($conn,"utf8");
                  $result2 = $conn->query("SELECT * FROM ANAK ORDER BY D DESC");

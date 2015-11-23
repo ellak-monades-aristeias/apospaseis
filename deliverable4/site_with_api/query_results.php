@@ -102,8 +102,7 @@
 	     echo "</div></div></div>";	   
 	     echo "</div>";
 	   }
-	   else{
-		  include("conf.php");     		     
+	   else{		  	     
 		  $conn = new mysqli(HOST,USERNAME,DB_PWD, DATABASE);   
 		  mysqli_set_charset($conn,"utf8");					      
 		  
