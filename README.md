@@ -17,18 +17,15 @@
 
 Το @pospaseis προσφέρει μια διεπαφή προγραμματισμού εφαρμογής (Application Programming Interface-API) που παρέχει έναν εύχρηστο τρόπο ανάκτησης των αποτελεσμάτων μιας αναζήτησης σε μορφή JSON. Έτσι, To @pospaseis δίνει τη δυνατότητα σε οποιονδήποτε προγραμματιστή να πραγματοποιήσει αναζητήσεις μέσα από την εφαρμογή του ή το site του. Δείτε αναλυτικές οδηγίες για τη χρήση του API και παραδείγματα στο <a href="https://github.com/ellak-monades-aristeias/apospaseis/wiki/API">wiki/API</a>
 
-<h2>Οδηγίες για χρήστες</h2>
+<h2> Σε ποίους απευθύνεται - Κοινότητες Χρηστών - Προγραμματιστών(Developers) </h2>
+
+Δείτε στο <a href="https://github.com/ellak-monades-aristeias/apospaseis/wiki/%CE%A7%CF%81%CE%AE%CF%83%CF%84%CE%B5%CF%82-%CF%84%CE%BF%CF%85-@pospaseis">wiki/Χρήστες</a> σε ποιους απευθύνεται η υπηρεσία @pospaseis
 
 Διάβαστε <a href="users.md">εδώ</a> οδηγίες για τη χρήση της υπηρεσίας (web site και ΑPI)
 
-<h2>Οδηγίες για contributors</h2>
-
 Διάβαστε <a href="contributors.md">εδώ</a> κατευθύνσεις για συνέχιση ανάπτυξης τους @pospaseis από προγραμματιστές
 
-<h2> Σε ποίους απευθύνεται - Κοινότητες Χρηστών - Προγραμματιστών(Developers) </h2>
-...εδώ περιγράφετε τους δυνητικούς τελικούς χρήστες του έργου σας και τις κοινότητες χρηστών/developers που θα ενδιαφερόντουσαν να επεκτείνουν το έργο σας. ...
-
-Δείτε στο <a href="https://github.com/ellak-monades-aristeias/apospaseis/wiki/%CE%A7%CF%81%CE%AE%CF%83%CF%84%CE%B5%CF%82-%CF%84%CE%BF%CF%85-@pospaseis">wiki/Χρήστες</a> σε ποιους απευθύνεται η υπηρεσία @pospaseis
+Οι προγραμματιστές που επιθυμούν να επεκτείνουν το έργο θα πρέπει να γνωρίζουν τις τεχνολογίες που περιγράφονται <a href="https://github.com/ellak-monades-aristeias/apospaseis/wiki/%CE%A4%CE%B5%CF%87%CE%BD%CE%BF%CE%BB%CE%BF%CE%B3%CE%AF%CE%B5%CF%82">εδώ</a>
 
 <h2>Γλώσσα προγραμματισμού και Τεχνολογίες</h2>
 
