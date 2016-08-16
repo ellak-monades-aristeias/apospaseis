@@ -102,18 +102,11 @@
 	     echo "</div></div></div>";	   
 	     echo "</div>";
 	   }
-	   else{		  	     
+	   else{
+		  include("conf.php");     		     
 		  $conn = new mysqli(HOST,USERNAME,DB_PWD, DATABASE);   
-		  mysqli_set_charset($conn,"utf8");					      
-		  
-		  $sub = $_GET['sub'];
-		  if ($sub != 'Αναζήτηση αποσπάσεων'){
-			echo "<div class='container'>";
-		  } 
-		  else{
-		    echo "<div class='container-fluid'>";
-		  }		                                                                                          						  
-                          						   
+		  mysqli_set_charset($conn,"utf8");	
+		  		   
 		  $typeforeas = mysqli_real_escape_string($conn, $_GET['type_foreas']);		            
 		  $vathmida = mysqli_real_escape_string($conn, $_GET['vathmida']);
 		  $klados = mysqli_real_escape_string($conn, $_GET['klados']);					 		    
@@ -122,7 +115,16 @@
 		  $mitroo = mysqli_real_escape_string($conn, $_GET['mitroo']);
 		  $ln = mysqli_real_escape_string($conn, $_GET['lastname']);
 		  $fn = mysqli_real_escape_string($conn, $_GET['firstname']);
-		  $organiki = mysqli_real_escape_string($conn, $_GET['organiki']);          	
+		  $organiki = mysqli_real_escape_string($conn, $_GET['organiki']); 				      
+		  
+		  $sub = $_GET['sub'];
+		  if ($sub != 'Αναζήτηση αποσπάσεων'){
+			echo "<div class='container'>";
+		  } 
+		  else{
+		    echo "<div class='container-fluid'>";
+		  }		                                                                                          						  
+    	
 					      						   	
 		  if (($typeforeas!='') || ($vathmida!='') || ($klados!='') || ($yearapospasi!='') || ($pou!='') || ($mitroo!='') || ($ln!='') || ($organiki!='') || ($fn!='')){		  
 			 echo "<div class='row'><div class='box'><div class='col-lg-12'>";
@@ -216,19 +218,19 @@
 		 $pr='';		
 		 if ($typeforeas != ""){
 			$where = "$where TYPE = '$typeforeas' AND";
-			$pr=$pr."Τύπος απόσπασης: ".$typeforeas." | ";
+			$pr=$pr."Τύπος απόσπασης: ".htmlentities($typeforeas,ENT_QUOTES, "UTF-8")." | ";
 		 }
 		 if ($klados != ""){
 			$where = "$where KLADOS= '$klados' AND"; 
-		    $pr=$pr."Ειδικότητα: ".$klados." | ";
+		    $pr=$pr."Ειδικότητα: ".htmlentities($klados,ENT_QUOTES, "UTF-8")." | ";
 		 }					
 		 if ($vathmida != ""){
 		    $where = "$where VATHMIDA= '$vathmida' AND"; 
-			$pr=$pr."Βαθμίδα: ".$vathmida." | ";
+			$pr=$pr."Βαθμίδα: ".htmlentities($vathmida,ENT_QUOTES, "UTF-8")." | ";
 		 }	
 		 if ($yearapospasi != ""){
 		    $where = "$where YEAR_APOSPASI='$yearapospasi' AND"; 
-			$pr=$pr."Έτος: ".$yearapospasi." | ";
+			$pr=$pr."Έτος: ".htmlentities($yearapospasi,ENT_QUOTES, "UTF-8")." | ";
 		 }
 		 if ($organiki != ""){
 			$where = "$where APO LIKE '%$organiki%' AND"; 
@@ -240,7 +242,7 @@
 		 }
 		 if ($mitroo != ""){
 			$where = "$where AM = '$mitroo' AND"; 
-			$pr=$pr."Αρ. Μητρώου: ".htmlentities($mitroo)." | ";
+			$pr=$pr."Αρ. Μητρώου: ".htmlentities($mitroo,ENT_QUOTES, "UTF-8")." | ";
 		 }		
 		 if ($ln != ""){
 			$where = "$where LASTNAME LIKE '%$ln%' AND"; 
