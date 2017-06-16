@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Υπηρεσία αναζήτησης αποσπάσεων εκπαιδευτικών">
     <meta name="author" content="Stefanos Ougiaroglou">
-
+    <script src="sorttable.js"></script>
     <title>@pospaseis</title>
 
 <script>
@@ -154,7 +154,7 @@
 		    echo "<div class='row'><div class='box'>";               
             echo "<div class='col-lg-12'>";
 		    echo "<div class='table-responsive'>";        
-		    echo "<table class='table table-condensed table-striped table-hover'>";
+		    echo "<table  class='table table-condensed table-striped table-hover sortable'>";
 		    echo "<thead><tr>";
 	        
 	        echo "<th>Απ</th>";	        
@@ -259,16 +259,17 @@
 
 	 function printtable($textfield, $sql, $conn){
 		$result = $conn->query($sql);
-	    echo "<div class='table-responsive'>";        
-		echo "<table class='table table-striped'>";				
-		echo "<thead>";		
-		if ($textfield != "Έτος"){						
-		   echo "<tr><th colspan=2>Αποσπάσεις ανα $textfield</th></tr>";	
-		   echo "<tr><th class='text-center'>$textfield</th><th class='text-center'>Πλήθος αποσπάσεων</th></tr>";
+	            
+		echo "<p class=small style='text-align:left'><strong>Αποσπάσεις ανα $textfield</strong></p>";
+		echo "<div class='table-responsive'>";
+		echo "<table class='table table-striped sortable'>";
+		echo "<thead>";					
+			
+		if ($textfield != "Έτος"){			
+			echo "<tr><th class='text-center'>$textfield</th><th class='text-center'>Πλήθος αποσπάσεων</th></tr>";
 	    }
 	    else{
-		   echo "<tr><th colspan=3>Αποσπάσεις ανα $textfield</th></tr>";	
-		   echo "<tr><th class='text-center'>$textfield</th><th class='text-center'>Πλήθος αποσπάσεων</th><th class='text-center'>Αποφάσεις</th></tr>";
+			echo "<tr><th class='text-center'>$textfield</th><th class='text-center'>Πλήθος αποσπάσεων</th><th class='text-center'>Αποφάσεις</th></tr>";
 		}
 	    echo "</thead>";
 		echo "<tbody>";				
